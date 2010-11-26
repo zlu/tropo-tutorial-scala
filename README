@@ -9,3 +9,13 @@ Start Jetty
 >jetty-run
 Browe to http://localhost:8080
 Input phone number and message and click submit.
+
+The meat of the example code is in src/main/scala/MyScalatraFilter.scala
+
+get("/") display a form for sending sms
+post("/send") uses Tropo session token to send the sms.
+
+You will need to create a Tropo scripting application with a messaging token.
+Replace the value of token to your own.
+Your Tropo script should at least contain this line: message $msg, { :to => 'tel:+' + $to, :network => 'SMS'}
+
