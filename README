@@ -1,0 +1,11 @@
+An example application of sending sms using Tropo and Scalatra.
+You need to have Scala, SBT, and Scalatra installed.
+
+Launch SBT
+$sbt
+Fetch dependencies
+>update
+Start Jetty
+>jetty-run
+Browe to http://localhost:8080
+Input phone number and message and click submit.
